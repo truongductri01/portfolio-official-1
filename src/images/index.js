@@ -10,4 +10,5 @@ export const images = {
         searchPage: require("./vidnote/search-page.png"),
         chromeExtension: require("./vidnote/chrome-extension.jpg"),
     },
+    portrait: require("./Avatar-removebg.png"),
 };

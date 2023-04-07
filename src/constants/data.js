@@ -121,4 +121,54 @@ export const vidnote = {
     ],
 };
 
+export const resume = {
+    education: {
+        school: "Drexel University",
+        degree: "B.S. Computer Science (3.85 GPA)",
+        location: "Philadelphia, PA",
+        graduation: "Sep 2019 - Expected Jun 2024",
+        courses:
+            "- Relevant Coursework: Computer Programming, Algorithms and Analysis, Data Structures, Software Architecture, Systems Architecture, Systems Programming",
+    },
+    experiences: [
+        {
+            company: "Intuit",
+            position: "Software Engineering Intern - QuickBooks team",
+            location: "Mountain View, CA",
+            time: "Jun 2022 - Sep 2022",
+            desc: [
+                "Developed an algorithm that automatically categorized 100,000+ trips using <strong>React</strong>, <strong>TypeScript</strong>, and <strong>GraphQl</strong>",
+                "Created an API which transformed Google Trips' records into mileage models and stored them in <strong>DynamoDB</strong>",
+                "Maintained cross-platform design by deploying a feature which utilized <strong>Google Maps API</strong> for places suggestion",
+                "Constructed coding standards for the team which reduced development and onboarding time",
+                "Collaborated with 3 engineers on supporting 10+ customers, resolving 5+ issues, and delivering 3 new features",
+            ],
+        },
+        {
+            company: "Intuit",
+            position: "Software Engineering Intern - QuickBooks team",
+            location: "Mountain View, CA",
+            time: "May 2021 - Dec 2021",
+            desc: [
+                "Reduced the number of on-calls each week from 2 to 1 person and unified the UI/UX for both QBO's and QBSE's mileage tracking feature by developing a single plugin using <strong>React</strong> and <strong>TypeScript</strong>",
+                "Improved the product's interface and UX by delivering 3 responsive components and 2 algorithms",
+                "Monitored 10,000+ customers' product usage via <strong>Segment</strong> and <strong>Amplitude</strong>, and fulfilled 6 feature requests",
+                "Increased the platform's design consistency by renovating multiple components using Intuit's internal library",
+            ],
+        },
+        {
+            company: "Sharing Excess",
+            position: "Software Engineering Intern",
+            location: "Philadelphia, PA",
+            time: "Mar 2021 - May 2021",
+            desc: [
+                "Developed 10+ features for a web app which monitored the delivery of over 3 million pounds of food using frontend technologies (<strong>React</strong>, <strong>JavaScript</strong>, <strong>Sass</strong>, and <strong>Firebase</strong>)",
+                "Improved the product's interface and UX by delivering 3 responsive components and 2 algorithms",
+                "Monitored 10,000+ customers' product usage via <strong>Segment</strong> and <strong>Amplitude</strong>, and fulfilled 6 feature requests",
+                "Increased the platform's design consistency by renovating multiple components using Intuit's internal library",
+            ],
+        },
+    ],
+};
+
 export { data };

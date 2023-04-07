@@ -9,6 +9,11 @@ export default {
             normal: "1.5rem",
             subtitle: "2rem",
             xl: "4.5rem",
+
+            // resume
+            resumeTitle: "1.5rem",
+            resumeSubtitle: "1.25rem",
+            resumeDesc: "1rem",
             // title: ""
         },
         extend: {},
