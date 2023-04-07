@@ -3,13 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import VidNoteProject from "./pages/VidNoteProject/VidNoteProject";
+import Resume from "./pages/Resume/Resume";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <App />,
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
                 path: "vidnote",
                 element: <VidNoteProject />,
             },
+            { path: "resume", element: <Resume /> },
         ],
     },
 ]);

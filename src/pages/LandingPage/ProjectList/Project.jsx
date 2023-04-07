@@ -5,7 +5,7 @@ function Project({ title, index, description, images, img, id }) {
     const navigate = useNavigate();
     return (
         <div
-            className=" mb-[5rem] px-2 last:mb-0 cursor-pointer transition-all delay-75 ease-in
+            className=" mb-[5rem] px-2 last:mb-0 cursor-pointer transition-all duration-200 ease-in
             sm:px-6 
             hover:rounded-2xl  hover:py-6 hover:shadow-[0px_20px_20px_20px_#00000024]"
             onClick={() => {

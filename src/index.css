@@ -26,6 +26,7 @@ body {
 .title {
     font-family: "Spectral", serif;
 }
-.desc {
+.desc,
+p {
     font-family: "League Spartan", sans-serif;
 }
