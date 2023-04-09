@@ -14,7 +14,7 @@ let data = {
         {
             title: "YouTube VidNote",
             description:
-                "A project that helps YouTube viewers to document their thoughts and share that to their friends",
+                "A project that helps YouTube viewers document their thoughts and share that to their friends",
             images: ["", "", "", "", ""],
             img: images.vidnote.overview,
             id: "vidnote",
@@ -27,14 +27,14 @@ let data = {
         //     img: images.vidnote.overview,
         //     id: "mocknroll",
         // },
-        // {
-        //     title: "Proyecto Salvavidas",
-        //     description:
-        //         "A charity digital platform that raise funds to support 150+ children in Venezuela",
-        //     images: ["", "", ""],
-        //     img: images.vidnote.overview,
-        //     id: "proyecto",
-        // },
+        {
+            title: "Proyecto Salvavidas",
+            description:
+                "A charity digital platform that raise funds to support 150+ children in Venezuela",
+            images: ["", "", ""],
+            img: images.proyecto.overview,
+            id: "proyecto",
+        },
     ],
 };
 
@@ -45,9 +45,10 @@ export const vidnote = {
             "Have you ever watch a YouTube video that you really enjoy? After some days, when you re-watch it, do you still remember the main ideas of the video? I did not. I really want to note down my thoughts and understanding after watching a YouTube video. And that's how VidNote was created.",
             "VidNote is a personal project that will help people document their thoughts after watching a YouTube video. Moreover, they can make their notes public so that their friends, or anyone who have the access to the Internet could see it.",
         ],
-        role: "As the sole developer, I was able to work on all stages of the development including: Planning, Researching, Coding, and Hosting",
+        role: "As the sole developer, I was able to work on all stages of the development including: <strong>Planning</strong>, <strong>Researching</strong>, <strong>Coding</strong>, and <strong>Hosting</strong>",
         sourceCode: "vidnote-fullstack",
         sourceCodeUrl: "https://github.com/truongductri01/vidnote-fullstack",
+        status: "Currently down. Finding an alternative host.",
     },
     features: [
         {
@@ -59,7 +60,6 @@ export const vidnote = {
                 images.vidnote.searchPage,
                 images.vidnote.takingNote1,
                 images.vidnote.takingNote2,
-                images.vidnote.viewNote,
             ],
             img: "",
         },
@@ -76,10 +76,100 @@ export const vidnote = {
         {
             title: "A Chrome Extension",
             desc: [
-                "Provide an extension that will redirect the user from YouTube to the application to start taking note ",
+                "It could be inconvenient for a user to watch a YouTube video then have to search it again in my app.",
+                "To make it more convenient for users and drive more traffic to the app, I have created an extension that will re-direct a user to the application and start the note taking process with the same video playing.",
             ],
             images: [],
             img: images.vidnote.chromeExtension,
+        },
+    ],
+    technologies: {
+        frontend: [
+            { name: "React", icon: "" },
+            { name: "TypeScripte", icon: "" },
+            { name: "Tailwind", icon: "" },
+        ],
+        backend: [
+            { name: "SpringBoot", icon: "" },
+            { name: "Java", icon: "" },
+            { name: "YouTube Data Api", icon: "" },
+        ],
+    },
+    lessons: [
+        {
+            title: "Searching for Videos and writing Notes",
+            desc: [
+                "Utilizing the YouTube Data Api offered by Google, the application allows user to search for desire videos and start writing notes with the results returned.",
+            ],
+            img: "",
+        },
+        {
+            title: "Authenticate and Store data with Firebase",
+            desc: [
+                "Instead of building my own Authentication feature which will have more risk of exposing users' credentials, I utilize Firebase Develop Kit to handle the hard work for me.",
+                "The only task that is left will be designing a form to register and sign in a user.",
+                "Also, any data related to notes or videos is store in Firestore, a feature offered by Firebase",
+            ],
+            img: "",
+        },
+        {
+            title: "A Chrome Extension",
+            desc: [
+                "It could be inconvenient for a user to watch a YouTube video then have to search it again in my app.",
+                "To make it more convenient for users and drive more traffic to the app, I have created an extension that will re-direct a user to the application and start the note taking process with the same video playing.",
+            ],
+            img: "",
+        },
+    ],
+};
+
+export const proyecto = {
+    intro: {
+        title: "Proyecto Salvavidas",
+        desc: [
+            "<strong>Proyecto Salvavidas</strong> or <strong>The Lifeguard Project</strong>, created by the Un Par Por Un Sueño foundation, aims to save lives by allowing people to sponsor a child and ensure their basic needs such as food, health, and education.",
+            "This initiative emphasizes a personal connection between the sponsor and the sponsored child, with the sponsor being able to witness their growth and support their aspirations.",
+            "I was invited to join the team as a volunteer and to work on enhancing the features of the application.",
+        ],
+        role: "My role involved enhancing the functionality of the app to enable the admin team to perform their tasks seamlessly. This include <strong>Research</strong>, <strong>Planning</strong>, and <strong>Developing</strong>",
+        team: "The admin team comprises mostly college students around the world who have great passion in making an impact to society",
+        sourceCode: "vidnote-fullstack",
+        sourceCodeUrl: "https://github.com/truongductri01/vidnote-fullstack",
+        webpage: "https://salvavidasvzla.org/",
+        status: "Available on the internet",
+    },
+    features: [
+        {
+            title: "A feature allowing the admin to create posts for multiple children simultaneously",
+            desc: [
+                "Just by picking the children from a desire house (or all of the houses), the admin could customize a list of children which will then be used to generate a list of posts. The content of the post will be similar for all the of children, with the purpose of notifying the sponsors assigned with a child with a certain message",
+            ],
+            images: [
+                images.proyecto.massivePortSelectHouse,
+                images.proyecto.massivePost,
+                images.proyecto.massivePostReady,
+            ],
+            img: "",
+        },
+        {
+            title: "Pubsub Birthday email feature",
+            desc: [
+                "Every child has a birthday and we want to celebrate that. The feature helps set up a pubsub function that notify the sponsors any time the birthday of a child is comming.",
+                "The image below show the set up for the cloud scheduler function on <strong>Google Cloud Platform</strong>",
+            ],
+            images: [],
+            img: images.proyecto.pubSubBirthday,
+        },
+
+        {
+            title: "Warning Mailling Feature",
+            desc: [
+                "Every house will consist of some children that need to receive the money from a sponsor.",
+                "Therefore, whenever the number of children in a house drops below 40, we want to notify the admin so that they could work on finding more children to fill in the list.",
+                "The code below show the logic of sending an email whenever such situation happens.",
+            ],
+            images: [],
+            img: images.proyecto.warningMailling,
         },
     ],
     technologies: {

@@ -5,13 +5,13 @@ function Project({ title, index, description, images, img, id }) {
     const navigate = useNavigate();
     return (
         <div
-            className=" mb-[5rem] px-2 last:mb-0 cursor-pointer transition-all duration-200 ease-in
+            className={` mb-[5rem] px-2 last:mb-0 cursor-pointer transition-all duration-200 ease-in
+            ${id === "vidnote" && "bg-yellow-100 "}
+            ${id === "proyecto" && "bg-red-100"}
             sm:px-6 
-            hover:rounded-2xl  hover:py-6 hover:shadow-[0px_20px_20px_20px_#00000024]"
+            rounded-2xl  py-6 shadow-[0px_4px_4px_4px_#00000024]`}
             onClick={() => {
-                if (id === "vidnote") {
-                    navigate("/vidnote");
-                }
+                navigate("/" + id);
             }}
         >
             <div className=" flex items-center">
@@ -35,12 +35,12 @@ function Project({ title, index, description, images, img, id }) {
                 ))}
             </div> */}
             <div className=" w-full flex items-center justify-end">
-                <button className="desc rounded-lg text-normal text-blue-500">
+                <button className="desc rounded-xl text-normal text-blue-500 bg-white px-6 py-2">
                     Learn more
                 </button>
             </div>
             <div className=" mt-[2.5rem]">
-                <img src={img} alt="" width={"100%"} />
+                <img src={img} alt="" width={"100%"} className=" rounded-xl" />
             </div>
         </div>
     );

@@ -7,6 +7,7 @@ import { RouterProvider, createHashRouter } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import VidNoteProject from "./pages/VidNoteProject/VidNoteProject";
 import Resume from "./pages/Resume/Resume";
+import ProyectoProject from "./pages/ProyectoProject/ProyectoProject";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -22,6 +23,10 @@ const router = createHashRouter([
             {
                 path: "vidnote",
                 element: <VidNoteProject />,
+            },
+            {
+                path: "proyecto",
+                element: <ProyectoProject />,
             },
             { path: "resume", element: <Resume /> },
         ],

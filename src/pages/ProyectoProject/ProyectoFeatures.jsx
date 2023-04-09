@@ -1,9 +1,9 @@
 import React from "react";
-import { vidnote } from "../../constants/data";
+import { proyecto } from "../../constants/data";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 
-function Features() {
-    let { features } = vidnote;
+function ProyectoFeatures() {
+    let { features } = proyecto;
     return (
         <div>
             <p className="title text-[2.5rem] mb-[3rem]">Features</p>
@@ -19,10 +19,7 @@ const SingleFeature = ({ title, desc, images, img, index }) => {
         <div className=" mb-[2rem] last:mb-0">
             <div className=" flex items-center">
                 <Numbering value={index + 1} />
-                <p
-                    className="title text-normal ml-[1.25rem]"
-                    dangerouslySetInnerHTML={{ __html: title }}
-                />
+                <p className="title text-normal ml-[1.25rem]">{title}</p>
             </div>
             <div className=" my-[1.25rem] pl-4">
                 {desc.map((d) => (
@@ -67,4 +64,4 @@ const Numbering = ({ value }) => {
     );
 };
 
-export default Features;
+export default ProyectoFeatures;

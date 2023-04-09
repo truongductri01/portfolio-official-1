@@ -6,7 +6,10 @@ function Intro() {
     return (
         <div>
             <div>
-                <p className="title text-[3.25rem] mb-10">{intro.title}</p>
+                <p
+                    className="title text-[3.25rem] mb-10"
+                    dangerouslySetInnerHTML={{ __html: intro.title }}
+                />
                 {intro.desc.map((desc, index) => (
                     <p className="desc text-normal mb-5 last:mb-0" key={index}>
                         {desc}
@@ -16,13 +19,16 @@ function Intro() {
 
             <div className=" mt-10">
                 <p className="title text-normal mb-[1rem]">My Role</p>
-                <p className="desc text-normal">{intro.role}</p>
+                <p
+                    className="desc text-normal"
+                    dangerouslySetInnerHTML={{ __html: intro.role }}
+                />
             </div>
 
             <div className=" mt-10 flex">
-                <p className="title text-normal">Source code:</p>
+                <p className="title text-normal">View the code:</p>
                 <a
-                    className="desc text-normal ml-3 text-blue-500 underline"
+                    className="desc text-normal ml-3 text-purple-600 underline"
                     href={intro.sourceCodeUrl}
                     target="blank"
                 >
