@@ -8,6 +8,7 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import VidNoteProject from "./pages/VidNoteProject/VidNoteProject";
 import Resume from "./pages/Resume/Resume";
 import ProyectoProject from "./pages/ProyectoProject/ProyectoProject";
+import HomePage from "./pages/HomePage/HomePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,6 +19,10 @@ const router = createHashRouter([
         children: [
             {
                 path: "",
+                element: <HomePage />
+            },
+            {
+                path: "landing",
                 element: <LandingPage />,
             },
             {

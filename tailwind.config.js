@@ -9,9 +9,9 @@ export default {
             background: "fefefe",
         },
         fontSize: {
-            normal: "1.5rem",
-            subtitle: "2rem",
-            xl: "4.5rem",
+            normal: "1.25rem",
+            subtitle: "1.5rem",
+            xl: "3rem",
 
             // resume
             resumeTitle: "1.5rem",

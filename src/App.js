@@ -1,19 +1,22 @@
 import React from "react";
 import NavBar from "./components/Navbar/NavBar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import ScrollBackTop from "./components/ScrollBackTop/ScrollBackTop";
 
 function App() {
+    const location = useLocation();
+    console.log(location.pathname);
+    let isHomePage = location.pathname === "/";
     return (
         <>
             <ScrollBackTop />
             <ScrollToTop />
-            <div className="App px-4 py-5 scrollbar-hide md:px-16">
-                <NavBar />
+            <div className="App min-h-screen max-w-screen px-4 md:px-16">
+                {!isHomePage && <NavBar />}
                 <Outlet />
-                <Footer />
+                {!isHomePage && <Footer />}
             </div>
         </>
     );

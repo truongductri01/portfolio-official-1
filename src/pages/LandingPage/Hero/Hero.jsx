@@ -3,9 +3,9 @@ import React from "react";
 function Hero() {
     return (
         <div>
-            <div className=" mb-[6em]">
-                <p className="title text-[4.25em]">Hello, I'm Tri Truong</p>
-                <p className="title text-[2.5em]">I am a Software Developer</p>
+            <div className=" mb-[2rem]">
+                <p className="title text-xl">Hi, I'm Tri Truong</p>
+                <p className="title text-subtitle">Software Developer at Intuit</p>
             </div>
             <div>
                 <p className="desc text-normal">
@@ -25,10 +25,10 @@ function Hero() {
                     features for our product.
                 </p>
                 <br />
-                <p className="desc text-normal">
+                {/* <p className="desc text-normal">
                     I believe I can help your team deliver product with
                     high-quality and satisfy your customers.
-                </p>
+                </p> */}
             </div>
         </div>
     );

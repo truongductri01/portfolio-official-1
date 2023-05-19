@@ -6,7 +6,8 @@ import { images } from "../images";
         title: string,
         description: string,
         images: Array<any>,
-        id: ("vidnote" | "mocknroll" | "proyecto")
+        id: ("vidnote" | "mocknroll" | "proyecto"),
+        skills: Array<string>
     }>}}
  */
 let data = {
@@ -18,6 +19,7 @@ let data = {
             images: ["", "", "", "", ""],
             img: images.vidnote.overview,
             id: "vidnote",
+            skills: ["React", "SpringBoot", "Rest API", "YouTube API"]
         },
         // {
         //     title: "MockNRoll",
@@ -34,6 +36,7 @@ let data = {
             images: ["", "", ""],
             img: images.proyecto.overview,
             id: "proyecto",
+            skills: ["React", "Google Cloud Platform", "MailJet"]
         },
     ],
 };
