@@ -1,25 +1,8 @@
 import React from 'react';
 import { resume } from "../../../constants/data";
 
-function isSectionInView(section) {
-    const scrollTop = window.scrollY + 80;
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionBottom = sectionTop + section.clientHeight;
-    return scrollTop >= sectionTop && scrollTop < sectionBottom;
-}
-function Resume({ id, setActiveId }) {
+function Resume({ id }) {
     let { experiences, education } = resume;
-    React.useEffect(() => {
-        let tempElement = document.getElementById(id);
-
-        if (tempElement) {
-            window.addEventListener('scroll', () => {
-                if (isSectionInView(tempElement)) {
-                    setActiveId(id);
-                }
-            })
-        }
-    }, [id, setActiveId]);
     return (
         <div className=" flex flex-col w-full mb-[6.25rem]" id={id}>
             <div className=" w-full">

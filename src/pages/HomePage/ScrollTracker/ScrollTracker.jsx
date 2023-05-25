@@ -1,13 +1,42 @@
 import React from 'react'
 
-function ScrollTracker({ activeId }) {
+function isSectionInView(section) {
+    const scrollTop = window.scrollY;
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionBottom = sectionTop + section.clientHeight;
+    return scrollTop >= sectionTop && scrollTop < sectionBottom;
+};
+
+function ScrollTracker({ activeId, setActiveId }) {
     const onClickHandle = (id) => {
-        // console.log("Id:", id);
-        // let element = document.getElementById(id);
-        // if (element) {
-        //     window.scrollTo({ top: element.getBoundingClientRect().top, behavior: "smooth" })
-        // }
     }
+
+    // calculate everything here
+
+    React.useEffect(() => {
+        // get all the element for the components
+        let aboutSection = document.getElementById("About");
+        let resumeSection = document.getElementById("Resume");
+        let projectSection = document.getElementById("Projects");
+
+        if (aboutSection && resumeSection && projectSection) {
+            // find which one is the current in view
+            window.addEventListener('scroll', () => {
+                let arr = [
+                    { id: "About", element: aboutSection },
+                    { id: "Resume", element: resumeSection },
+                    { id: "Projects", element: projectSection }
+                ];
+
+                for (let obj of arr) {
+                    if (isSectionInView(obj.element)) {
+                        setActiveId(obj.id);
+                    }
+                }
+            })
+        }
+    }, [setActiveId]);
+
     return (
         <div>
             <Tab title="About" id="About" activeId={activeId} onClickHandle={onClickHandle} />

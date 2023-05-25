@@ -7,7 +7,10 @@ import ScrollTracker from './ScrollTracker/ScrollTracker';
 
 function HomePage() {
     const [activeId, setActiveId] = React.useState();
-    console.log(activeId)
+
+    React.useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
     return (
         <div className='HomePage px-10 w-full h-full max-w-full max-h-full flex flex-col lg:grid lg:grid-cols-12 lg:gap-10 relative lg:py-0 py-24'>
             <div className='w-full pb-20 lg:py-20 lg:max-h-screen lg:col-start-1 lg:col-end-6 lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between'>
@@ -17,9 +20,9 @@ function HomePage() {
                 </div>
             </div>
             <div className='w-full lg:col-start-6 lg:col-end-13 lg:py-20'>
-                <About id={"About"} setActiveId={setActiveId} />
-                <Resume id={"Resume"} setActiveId={setActiveId} />
-                <ProjectList id={"Projects"} setActiveId={setActiveId} />
+                <About id={"About"} />
+                <Resume id={"Resume"} />
+                <ProjectList id={"Projects"} />
             </div>
         </div>
     )

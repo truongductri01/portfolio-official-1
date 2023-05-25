@@ -1,24 +1,6 @@
 import React from 'react';
 
-function isSectionInView(section) {
-    const scrollTop = window.scrollY + 80;
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionBottom = sectionTop + section.clientHeight;
-    return scrollTop >= sectionTop && scrollTop < sectionBottom;
-}
-function About({ setActiveId, id }) {
-
-    React.useEffect(() => {
-        let tempElement = document.getElementById(id);
-
-        if (tempElement) {
-            window.addEventListener('scroll', () => {
-                if (isSectionInView(tempElement)) {
-                    setActiveId(id);
-                }
-            });
-        }
-    }, [id, setActiveId]);
+function About({ id }) {
     return (
         <div className='w-full' id={id}>
             <p className="title text-blue-700 text-subtitle lg:hidden">About</p>
