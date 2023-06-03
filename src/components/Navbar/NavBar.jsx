@@ -1,9 +1,9 @@
 import React from "react";
 import Logo from "../Logo/Logo";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
 function NavBar() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     return (
         <div className=" flex justify-between items-center w-full mb-[3.75rem]">
             <Logo />
