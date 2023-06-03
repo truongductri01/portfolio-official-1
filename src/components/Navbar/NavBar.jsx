@@ -6,17 +6,17 @@ function NavBar() {
     const navigate = useNavigate();
     return (
         <div className=" flex justify-between items-center w-full mb-[3.75rem]">
-            <Logo width={100} height={100} />
+            <Logo />
             <div className=" flex items-center justify-between w-min">
                 {/* <p className="desc mr-10 text-normal sm:mr-20 cursor-pointer">Work</p> */}
-                <p
+                {/* <p
                     className="desc text-normal cursor-pointer hover:text-blue-500"
                     onClick={() => {
                         navigate("/resume");
                     }}
                 >
                     Resume
-                </p>
+                </p> */}
             </div>
         </div>
     );

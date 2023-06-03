@@ -6,40 +6,30 @@ function Project({ title, index, description, images, img, id }) {
     return (
         <div
             className={`
-            mb-[3rem] px-2 py-2 last:mb-0 cursor-pointer transition-all duration-200 ease-in
+            mb-[3rem] px-6 py-6 last:mb-0 cursor-pointer transition-all duration-200 ease-in
             flex flex-col
             ${id === "vidnote" && "bg-yellow-100 "}
             ${id === "proyecto" && "bg-red-100"}
-            sm:px-6 
-            sm:py-6
             rounded-2xl shadow-[0px_4px_4px_4px_#00000024]
             `}
             onClick={() => {
-                navigate("/" + id);
+                navigate("/projects/" + id);
             }}
         >
-            <div className="grid grid-cols-12">
-                <div className="flex items-center order-1 col-span-4 lg:col-span-5">
+            <div className="flex flex-col md:grid md:grid-cols-12">
+                <div className="flex flex-col order-1 col-span-6 lg:col-span-5">
                     {/* <Numbering value={index} /> */}
-                    <p className="title text-normal mr-2">{title}</p>
+                    <p className="title text-normal">{title}</p>
+                    <p className="desc text-normal mt-5">{description}</p>
                 </div>
-                <div className="order-2 col-span-8 lg:col-span-7">
+                <div className="order-2 col-span-1"></div>
+                <div className="order-3 col-span-5 mt-5 md:mt-0 lg:col-span-6">
                     <img src={img} alt="" className=" rounded-xl" />
-                </div>
-            </div>
-
-            <div className="mt-[2rem]">
-                <div className=" flex items-center">
-                    <p className="desc text-normal">{description}</p>
-                </div>
-
-                <div className=" w-full flex items-center justify-end">
-                    <button className="desc rounded-xl text-normal text-blue-500 bg-white px-6 py-2">
+                    <button className="desc rounded-xl text-normal text-blue-500 bg-white px-6 py-2 mt-[2rem] float-right">
                         Learn more
                     </button>
                 </div>
             </div>
-
         </div>
     );
 }
