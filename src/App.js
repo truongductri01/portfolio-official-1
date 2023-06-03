@@ -14,9 +14,7 @@ function App() {
             <ScrollBackTop />
             <ScrollToTop />
             <div className="App min-h-screen max-w-screen px-4 md:px-16">
-                {!isHomePage && <NavBar />}
                 <Outlet />
-                {!isHomePage && <Footer />}
             </div>
         </>
     );

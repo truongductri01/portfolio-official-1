@@ -1,16 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Logo({ width, height }) {
+function Logo() {
     const navigate = useNavigate();
     return (
         <svg
-            width={width}
-            height={height}
             viewBox="0 0 100 100"
             fill="black"
             xmlns="http://www.w3.org/2000/svg"
-            className=" cursor-pointer w-[2.75rem] h-[2.75rem] sm:w-[5.25rem] sm:h-[5.25rem]"
+            className=" cursor-pointer w-[2.75rem] h-[2.75rem] sm:w-[4rem] sm:h-[4rem]"
             onClick={() => {
                 navigate("/");
             }}
