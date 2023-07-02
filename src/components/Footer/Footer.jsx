@@ -15,7 +15,7 @@ function Footer() {
             </div>
             <div className=" flex items-end mt-[2.5rem]">
                 <a
-                    className="desc text-normal text-blue-500 mr-[3rem]"
+                    className="desc text-normal text-blue-600 mr-[3rem]"
                     href="https://www.linkedin.com/in/tridt/"
                     target="blank"
                 >
@@ -24,14 +24,14 @@ function Footer() {
                 <a
                     href="https://github.com/truongductri01"
                     target="blank"
-                    className="desc text-normal text-blue-500 mr-[3rem]"
+                    className="desc text-normal text-blue-600 mr-[3rem]"
                 >
                     GitHub
                 </a>
                 <a
                     href="mailto:truongductri01@gmail.com"
                     target="blank"
-                    className="desc text-normal text-blue-500"
+                    className="desc text-normal text-blue-600"
                 >
                     Email
                 </a>
