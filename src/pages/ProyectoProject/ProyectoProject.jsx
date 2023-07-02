@@ -2,7 +2,7 @@ import React from "react";
 import ProyectoIntro from "./ProyectoIntro";
 import ProyectoFeatures from "./ProyectoFeatures";
 import { images } from "../../images";
-import CodeBlock from "../../components/CodeBlock/CodeBlock";
+// import CodeBlock from "../../components/CodeBlock/CodeBlock";
 
 function ProyectoProject() {
     return (
