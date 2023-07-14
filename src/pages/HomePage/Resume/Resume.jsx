@@ -4,7 +4,7 @@ import { resume } from "../../../constants/data";
 function Resume({ id }) {
     let { experiences, education } = resume;
     return (
-        <div className=" flex flex-col w-full mb-[6.25rem]" id={id}>
+        <div className=" flex flex-col w-full" id={id}>
             <div className=" w-full">
                 <p className="title text-resumeTitle text-blue-700">
                     Education

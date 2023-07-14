@@ -56,3 +56,14 @@ p {
         }
     }
 }
+
+.HomePage {
+    scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-type: mandatory; /* Safari and older versions */
+    scroll-snap-align: start;
+    -webkit-scroll-snap-align: start; /* Safari and older versions */
+}
+.HomePage * {
+    scroll-snap-stop: always;
+    -webkit-scroll-snap-stop: always; /* Safari and older versions */
+}

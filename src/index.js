@@ -20,7 +20,7 @@ const router = createHashRouter([
         children: [
             {
                 path: "",
-                element: <HomePage />
+                element: <HomePage />,
             },
             {
                 path: "projects",
@@ -34,7 +34,7 @@ const router = createHashRouter([
                         path: "proyecto",
                         element: <ProyectoProject />,
                     },
-                ]
+                ],
             },
             {
                 path: "landing",
@@ -45,9 +45,10 @@ const router = createHashRouter([
     },
 ]);
 root.render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+    <HomePage />
+    // <React.StrictMode>
+    //     <RouterProvider router={router} />
+    // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

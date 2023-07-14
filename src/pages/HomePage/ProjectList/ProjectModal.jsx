@@ -17,12 +17,11 @@ function ProjectModal({ projectId, open, setOpen }) {
     return (
         <div
             className={`
-            ProjectModal
+            ProjectModal overflow-auto
             fixed top-0 left-0 w-screen h-max min-h-screen max-w-full max-h-full
             bg-white z-50
-            overflow-auto
             animate-fade-in
-            lg:absolute lg:w-full lg:h-full
+            lg:absolute lg:w-full lg:h-full lg:overflow-visible
             ${open ? " block" : " hidden"}
             `}
         >
