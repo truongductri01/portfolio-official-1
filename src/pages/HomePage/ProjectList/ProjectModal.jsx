@@ -5,9 +5,13 @@ import ProyectoProject from "../../ProyectoProject/ProyectoProject";
 function ProjectModal({ projectId, open, setOpen }) {
     React.useEffect(() => {
         // reset the scroll position of the current element
-        const element = document.querySelector(".ProjectModal");
-        if (element) {
-            element.scrollTop = 0;
+        const modalElement = document.querySelector(".ProjectModal");
+        const homeElement = document.querySelector(".HomePage");
+        if (modalElement) {
+            modalElement.scrollTop = 0;
+        }
+        if (homeElement) {
+            homeElement.scrollTop = 0;
         }
     }, [projectId]);
     return (
