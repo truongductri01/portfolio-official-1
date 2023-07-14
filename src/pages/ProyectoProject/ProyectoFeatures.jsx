@@ -22,10 +22,11 @@ const SingleFeature = ({ title, desc, images, img, index }) => {
                 <p className="title text-normal ml-[1.25rem]">{title}</p>
             </div>
             <div className=" my-[1.25rem] pl-4">
-                {desc.map((d) => (
+                {desc.map((d, index) => (
                     <p
                         className="desc text-normal mb-4 last:mb-0"
                         dangerouslySetInnerHTML={{ __html: d }}
+                        key={index}
                     />
                 ))}
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { resume } from "../../../constants/data";
 
 function Resume({ id }) {
@@ -21,9 +21,8 @@ function Resume({ id }) {
                 ))}
             </div>
         </div>
-    )
+    );
 }
-
 
 const Experience = ({ company, position, location, time, desc }) => {
     return (
@@ -86,4 +85,4 @@ const Education = ({ school, degree, location, graduation, courses }) => {
     );
 };
 
-export default Resume
+export default Resume;

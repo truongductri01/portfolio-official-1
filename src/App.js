@@ -13,7 +13,7 @@ function App() {
         <>
             <ScrollBackTop />
             <ScrollToTop />
-            <div className="App min-h-screen max-w-screen px-4 md:px-16">
+            <div className="App h-screen w-screen max-w-full max-h-full overflow-hidden px-4 md:px-16">
                 <Outlet />
             </div>
         </>

@@ -1,8 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-function Project({ title, index, description, images, img, id }) {
-    const navigate = useNavigate();
+function Project({
+    title,
+    index,
+    description,
+    images,
+    img,
+    id,
+    setOpenModal,
+    setProjectId,
+}) {
     return (
         <div
             className={`
@@ -10,10 +17,11 @@ function Project({ title, index, description, images, img, id }) {
             flex flex-col
             ${id === "vidnote" && "bg-yellow-100 "}
             ${id === "proyecto" && "bg-red-100"}
-            rounded-2xl shadow-[0px_4px_4px_4px_#00000024]
+            rounded-2xl 
             `}
             onClick={() => {
-                navigate("/projects/" + id);
+                setProjectId(id);
+                setOpenModal(true);
             }}
         >
             <div className="flex flex-col md:grid md:grid-cols-12">

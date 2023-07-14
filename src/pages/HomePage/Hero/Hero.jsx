@@ -38,7 +38,7 @@ function Hero() {
                 development which includes <strong>React</strong>,
                 <strong>TypeScript</strong>.
             </p>
-            <br />
+            {/* <br /> */}
 
             {/* <br /> */}
         </div>
