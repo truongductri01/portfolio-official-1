@@ -18,10 +18,10 @@ function ProjectModal({ projectId, open, setOpen }) {
         <div
             className={`
             ProjectModal overflow-auto
-            fixed top-0 left-0 w-screen h-max min-h-screen max-w-full max-h-full
+            fixed top-0 left-0 w-screen h-max min-h-screen max-w-full
             bg-white z-50
             animate-fade-in
-            lg:absolute lg:w-full lg:h-full lg:overflow-visible
+            lg:absolute lg:w-full lg:overflow-visible
             ${open ? " block" : " hidden"}
             `}
         >
