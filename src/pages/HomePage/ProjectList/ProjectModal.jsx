@@ -20,7 +20,6 @@ function ProjectModal({ projectId, open, setOpen }) {
             ProjectModal overflow-auto
             fixed top-0 left-0 w-screen h-max min-h-screen max-w-full
             bg-white z-50
-            animate-fade-in
             lg:absolute lg:w-full lg:overflow-visible
             ${open ? " block" : " hidden"}
             `}
