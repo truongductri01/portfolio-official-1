@@ -4,8 +4,9 @@ import { images } from "../../images";
 function ScrollBackTop() {
     return (
         <div
-            className="fixed bottom-2 right-2 cursor-pointer opacity-50 hover:opacity-100 z-50"
+            className="ScrollBackTop fixed bottom-2 right-2 cursor-pointer opacity-50 hover:opacity-100 z-[10000]"
             onClick={() => {
+                console.log("Scrolling");
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth",

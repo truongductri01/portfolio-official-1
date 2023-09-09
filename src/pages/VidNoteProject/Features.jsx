@@ -34,15 +34,6 @@ const SingleFeature = ({ title, desc, images, img, index }) => {
             </div>
 
             {images.length > 0 ? (
-                // <div className=" flex overflow-y-scroll scrollbar-hide w-full">
-                //     {images.map((image) => (
-                //         <img
-                //             className=" w-[300px] h-[200px] sm:w-[600px] sm:h-[400px] mr-[1.25rem] last:mr-0"
-                //             src={image}
-                //             alt="demo"
-                //         />
-                //     ))}
-                // </div>
                 <ImageSlider images={images} />
             ) : (
                 <div className=" flex items-center justify-center border-2 border-solid border-black p-4 rounded-xl bg-gray-200">
