@@ -29,7 +29,7 @@ function HomePage() {
                     <Hero />
                 </div>
             </div>
-            <div className="w-full pb-5 lg:col-start-6 lg:col-end-13 lg:py-20 relative">
+            <div className="w-full pb-5 lg:col-start-6 lg:col-end-13 lg:pb-20 relative">
                 <ProjectModal
                     open={openModal}
                     projectId={projectId}
