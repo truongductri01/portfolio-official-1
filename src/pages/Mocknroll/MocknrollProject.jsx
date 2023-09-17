@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Intro from "./Intro";
 import { images } from "../../images";
 import Demo from "./Demo";
+import Takeaway from "./Takeaway";
 
 function MocknrollProject() {
     useEffect(() => {
@@ -17,6 +18,7 @@ function MocknrollProject() {
             />
             {/* Demo video */}
             <Demo />
+            <Takeaway />
         </div>
     );
 }
