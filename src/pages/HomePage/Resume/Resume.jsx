@@ -3,22 +3,19 @@ import { resume } from "../../../constants/data";
 
 function Resume({ id }) {
     let { experiences, education } = resume;
+
     return (
         <div className=" flex flex-col w-full" id={id}>
-            <div className=" w-full">
-                <p className="title text-resumeTitle text-blue-700">
-                    Education
-                </p>
-                <Education {...education} />
-            </div>
-
-            <div className=" w-full mt-[2rem]">
-                <p className="title text-resumeTitle text-blue-700">
-                    Experiences
-                </p>
+            <div className=" w-full mb-[2rem]">
+                <Numbering number={1} title={"Experiences"} />
                 {experiences.map((exp, index) => (
                     <Experience key={index} {...exp} />
                 ))}
+            </div>
+
+            <div className=" w-full">
+                <Numbering number={2} title={"Education"} />
+                <Education {...education} />
             </div>
         </div>
     );
@@ -81,6 +78,18 @@ const Education = ({ school, degree, location, graduation, courses }) => {
             <p className="desc text-resumeDesc sm:text-resumeSubtitle mt-[0.5rem]">
                 {courses}
             </p>
+        </div>
+    );
+};
+
+const Numbering = ({ number, title }) => {
+    return (
+        <div className="">
+            <p className="title text-resumeTitle text-blue-700">
+                {/* <span className="mr-2">{number}.</span> */}
+                {title}
+            </p>
+            <div className=" w-1/6 h-[2px] bg-slate-500"></div>
         </div>
     );
 };

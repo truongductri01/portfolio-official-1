@@ -17,6 +17,7 @@ function Project({
             flex flex-col
             ${id === "vidnote" && "bg-yellow-100 "}
             ${id === "proyecto" && "bg-red-100"}
+            ${id === "mocknroll" && " bg-blue-100"}
             rounded-2xl 
             `}
             onClick={() => {

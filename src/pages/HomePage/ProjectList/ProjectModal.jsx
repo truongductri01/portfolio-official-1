@@ -1,6 +1,7 @@
 import React from "react";
 import VidNoteProject from "../../VidNoteProject/VidNoteProject";
 import ProyectoProject from "../../ProyectoProject/ProyectoProject";
+import MocknrollProject from "../../Mocknroll/MocknrollProject";
 
 function ProjectModal({ projectId, open, setOpen }) {
     React.useEffect(() => {
@@ -37,6 +38,7 @@ function ProjectModal({ projectId, open, setOpen }) {
             <div className="px-10 pb-10">
                 {projectId === "vidnote" && <VidNoteProject />}
                 {projectId === "proyecto" && <ProyectoProject />}
+                {projectId === "mocknroll" && <MocknrollProject />}
             </div>
         </div>
     );

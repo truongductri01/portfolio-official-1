@@ -28,6 +28,10 @@ export const images = {
         pubSubBirthday: require("./proyecto/pub-sub-birthday.png"),
         warningMailling: require("./proyecto/warning-mailing.jpg"),
     },
+    mocknroll: {
+        landingPage: require("./mocknroll/landingpage.png"),
+        dashboard: require("./mocknroll/dashboard.png"),
+    },
     portrait: require("./Avatar-removebg.png"),
     arrowUp: arrowUp,
 };

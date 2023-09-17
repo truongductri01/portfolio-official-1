@@ -13,22 +13,22 @@ import { images } from "../images";
 let data = {
     projects: [
         {
+            title: "MockNRoll",
+            description:
+                "A hackathon project developed with the integration of ChatGPT producing mock behavioral interviews with real-time feedback",
+            images: ["", "", ""],
+            img: images.mocknroll.landingPage,
+            id: "mocknroll",
+        },
+        {
             title: "YouTube VidNote",
             description:
                 "A project that helps YouTube viewers document their thoughts and share that to their friends",
             images: ["", "", "", "", ""],
             img: images.vidnote.overview,
             id: "vidnote",
-            skills: ["React", "SpringBoot", "Rest API", "YouTube API"]
+            skills: ["React", "SpringBoot", "Rest API", "YouTube API"],
         },
-        // {
-        //     title: "MockNRoll",
-        //     description:
-        //         "A hackathon project developed with the integration of ChatGPT which help conduct mock interviews and provide realtime feedback",
-        //     images: ["", "", ""],
-        //     img: images.vidnote.overview,
-        //     id: "mocknroll",
-        // },
         {
             title: "Proyecto Salvavidas",
             description:
@@ -36,7 +36,7 @@ let data = {
             images: ["", "", ""],
             img: images.proyecto.overview,
             id: "proyecto",
-            skills: ["React", "Google Cloud Platform", "MailJet"]
+            skills: ["React", "Google Cloud Platform", "MailJet"],
         },
     ],
 };
@@ -224,6 +224,18 @@ export const resume = {
             "- Relevant Coursework: Computer Programming, Algorithms and Analysis, Data Structures, Software Architecture, Systems Architecture, Systems Programming",
     },
     experiences: [
+        {
+            company: "Intuit",
+            position: "Software Engineering Intern - Search team",
+            location: "Mountain View, CA",
+            time: "Jun 2023 - Sep 2023",
+            desc: [
+                "Reduced over 2 million database requests with an implementation of alternative searching service using <strong>React</strong>, <strong>TypeScript</strong>, and <strong>GraphQL</strong>",
+                "Utilized <strong>Spring Boot</strong>, <strong>Docker</strong>, and <strong>Elastic Search</strong> to establish a search plugin sample version for managers and designers to evaluate services parity and consolidate them into one, aiming to save $1.5 million in maintenance costs",
+                "Compiled feedback from more than 200 customers, delivering valuable insights to the Product Design team",
+                "Strengthened code quality by introducing over 20 Unit tests, minimizing bugs during feature development",
+            ],
+        },
         {
             company: "Intuit",
             position: "Software Engineering Intern - QuickBooks team",

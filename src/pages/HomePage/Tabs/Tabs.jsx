@@ -2,7 +2,7 @@ import React from "react";
 
 function Tabs({ tabId, setTabId, tabs }) {
     return (
-        <div className="Tabs flex items-center justify-between sm:justify-evenly sticky top-0 pt-20 bg-white">
+        <div className="Tabs flex items-center justify-between sm:justify-evenly sticky top-0 lg:pt-20 bg-white">
             {Object.keys(tabs).map((tabKey) => {
                 const tabValue = tabs[tabKey];
                 return (
