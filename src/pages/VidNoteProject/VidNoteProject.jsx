@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Intro from "./Intro";
 import { images } from "../../images";
 import Features from "./Features";
+import Demo from "./Demo";
 
 function VidNoteProject() {
     useEffect(() => {
@@ -15,6 +16,7 @@ function VidNoteProject() {
                 src={images.vidnote.overviewStraight}
                 alt="project Overview"
             />
+            <Demo />
             <Features />
         </div>
     );
