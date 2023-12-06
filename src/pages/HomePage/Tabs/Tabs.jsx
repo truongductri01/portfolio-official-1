@@ -2,7 +2,7 @@ import React from "react";
 
 function Tabs({ tabId, setTabId, tabs }) {
     return (
-        <div className="Tabs flex items-center justify-between sm:justify-evenly sticky top-0 lg:pt-20 bg-white">
+        <div className="Tabs flex items-center justify-evenly sticky top-0 pt-5 pb-3 lg:pt-20 bg-white overflow-y-auto gap-2">
             {Object.keys(tabs).map((tabKey) => {
                 const tabValue = tabs[tabKey];
                 return (
@@ -13,7 +13,7 @@ function Tabs({ tabId, setTabId, tabs }) {
                         `}
                     >
                         <p
-                            className={`title text-resumeTitle px-3 py-1 sm:px-10 sm:py-3 
+                            className={`title text-normal px-3 py-1 sm:px-10 sm:py-3 
                             ${tabId === tabValue ? " text-blue-700" : ""}
                             `}
                             onClick={() => {
