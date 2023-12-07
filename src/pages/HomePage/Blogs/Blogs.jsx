@@ -58,7 +58,7 @@ function Blogs({ posts, setPosts }) {
               to read more
             </p>
             <i
-              class="fa fa-solid fa-rotate-right text-normal cursor-pointer"
+              className="fa fa-solid fa-rotate-right text-normal cursor-pointer"
               onClick={() => getPosts()}
             ></i>
           </div>
