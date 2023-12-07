@@ -2,20 +2,24 @@ import React from "react";
 import Hero from "./Hero/Hero";
 import ProjectList from "./ProjectList/ProjectList";
 import Resume from "./Resume/Resume";
-import About from "./About/About";
+// import About from "./About/About";
 import Tabs from "./Tabs/Tabs";
 import ProjectModal from "./ProjectList/ProjectModal";
+import Blogs from "./Blogs/Blogs";
 
 const TAB_ID = {
     PROJECT: "Projects",
+    BLOGS: "Blogs",
     RESUME: "Resume",
-    ABOUT: "About",
+    // ABOUT: "About",
 };
 
 function HomePage() {
     const [tabId, setTabId] = React.useState(TAB_ID.PROJECT);
     const [projectId, setProjectId] = React.useState();
     const [openModal, setOpenModal] = React.useState(false);
+    const [posts, setPosts] = React.useState([]);
+
 
     React.useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -53,13 +57,16 @@ function HomePage() {
                         setProjectId={setProjectId}
                     />
                 )}
-                {tabId === TAB_ID.ABOUT && (
+                {tabId === TAB_ID.BLOGS && (
+                    <Blogs posts={posts} setPosts={setPosts}/>
+                )}
+                {/* {tabId === TAB_ID.ABOUT && (
                     <About
                         id={"About"}
                         setOpenModal={setOpenModal}
                         setProjectId={setProjectId}
                     />
-                )}
+                )} */}
             </div>
         </div>
     );

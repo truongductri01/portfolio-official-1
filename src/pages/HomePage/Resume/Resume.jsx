@@ -46,7 +46,7 @@ const Experience = ({ company, position, location, time, desc }) => {
                 <ul className=" sm:pl-4">
                     {desc.map((d, index) => (
                         <li
-                            className="desc text-resumeDesc mt-[0.5rem] last:mt-0 sm:text-resumeSubtitle"
+                            className="desc text-resumeDesc mt-[0.5rem] sm:text-resumeSubtitle"
                             key={index}
                             dangerouslySetInnerHTML={{ __html: "- " + d }}
                         />
