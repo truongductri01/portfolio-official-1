@@ -16,11 +16,11 @@ function Blogs({ posts, setPosts }) {
         "https://dev.to/api/articles?username=truongductri01&per_page=10"
       );
       const json = await response.json();
-      setTimeout(() => setPosts(json), 2000);
+      setPosts(json);
     } catch (error) {
       console.log("error", error);
     } finally {
-      setTimeout(() => setWaiting(false), 2000);
+      setTimeout(() => setWaiting(false), 1000);
     }
   };
   return (
