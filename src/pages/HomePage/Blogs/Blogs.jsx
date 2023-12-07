@@ -16,7 +16,7 @@ function Blogs({ posts, setPosts }) {
         "https://dev.to/api/articles?username=truongductri01&per_page=10"
       );
       const json = await response.json();
-      setPosts(json);
+      setTimeout(() => setPosts(json), 1000);
     } catch (error) {
       console.log("error", error);
     } finally {
@@ -25,7 +25,7 @@ function Blogs({ posts, setPosts }) {
   };
   return (
     <div className="flex flex-col w-full">
-      {posts.length === 0 && (
+      {(waiting || posts.length === 0) && (
         <div className="w-full flex flex-col justify-center items-center desc text-normal">
           {waiting ? <p>Loading blogs...</p> : <p>No blogs loaded yet</p>}
           <p>
@@ -44,18 +44,24 @@ function Blogs({ posts, setPosts }) {
       )}
       {posts.length > 0 && !waiting && (
         <div className="w-full flex flex-col desc">
-          <p className="text-normal text-center mb-5">
-            Visit:{" "}
-            <a
-              className="underline text-blue-700"
-              href="https://dev.to/truongductri01"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Tri's Blog
-            </a>{" "}
-            to read more
-          </p>
+          <div className="w-full flex items-center justify-between mb-5">
+            <p className="text-normal text-center">
+              Visit:{" "}
+              <a
+                className="underline text-blue-700"
+                href="https://dev.to/truongductri01"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Tri's Blog
+              </a>{" "}
+              to read more
+            </p>
+            <i
+              class="fa fa-solid fa-rotate-right text-normal cursor-pointer"
+              onClick={() => getPosts()}
+            ></i>
+          </div>
           {posts.map((post) => (
             <BlogPost post={post} key={post.id} />
           ))}
